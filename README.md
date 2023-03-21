@@ -37,7 +37,7 @@ python evaluate_gpt.py --model_engine gpt-3.5-0301 --dataset_path path/to/your/t
 # Report Generation Function
 The generate_report function is a key component of this evaluation script, providing an organized and informative summary of the GPT model's performance using the OpenAI API on a custom dataset. The generated report includes an introduction, dataset description, explanation of evaluation metrics, detailed results, and a conclusion. This function enables users to easily understand the evaluation results and make informed decisions about the model's performance and potential improvements.
 
-Example report:
+Example report and in no way relevant to how the gpt models performs:
 ```
 Model Evaluation Report
 Model: gpt-3.5-0301
