@@ -51,15 +51,15 @@ The dataset used for evaluation was obtained from the XYZ Dataset Repository. It
 
 Evaluation Metrics
 The evaluation metrics used in this report include:
+- BLEU Score: The Bilingual Evaluation Understudy (BLEU) score measures the similarity between generated text and reference text, ranging from 0 to 1, with higher scores indicating better performance.
+- ROUGE Scores: The Recall-Oriented Understudy for Gisting Evaluation (ROUGE) scores are a set of metrics (ROUGE-1, ROUGE-2, and ROUGE-L) that measure the overlap of n-grams between generated text and reference text, indicating the quality of the generated summary.
+- Word Error Rate (WER): The Word Error Rate (WER) is the ratio of the minimum number of edit operations (insertions, deletions, or substitutions) required to convert the generated text into the reference text, divided by the total number of words in the reference text.
+- Custom Metric (if applicable): A user-defined evaluation metric tailored to the specific task or application.
 
-BLEU Score: The Bilingual Evaluation Understudy (BLEU) score measures the similarity between generated text and reference text, ranging from 0 to 1, with higher scores indicating better performance.
-ROUGE Scores: The Recall-Oriented Understudy for Gisting Evaluation (ROUGE) scores are a set of metrics (ROUGE-1, ROUGE-2, and ROUGE-L) that measure the overlap of n-grams between generated text and reference text, indicating the quality of the generated summary.
-Word Error Rate (WER): The Word Error Rate (WER) is the ratio of the minimum number of edit operations (insertions, deletions, or substitutions) required to convert the generated text into the reference text, divided by the total number of words in the reference text.
-Custom Metric (if applicable): A user-defined evaluation metric tailored to the specific task or application.
 Results
-BLEU Score: 0.45
-ROUGE Scores: {'rouge-1': 0.6, 'rouge-2': 0.43, 'rouge-l': 0.57}
-Word Error Rate (WER): 0.25
+- BLEU Score: 0.45
+- ROUGE Scores: {'rouge-1': 0.6, 'rouge-2': 0.43, 'rouge-l': 0.57}
+- Word Error Rate (WER): 0.25
 
 Conclusion
 Based on the evaluation results, the GPT model shows satisfactory performance in terms of BLEU and ROUGE scores, while there is room for improvement in Word Error Rate. To enhance the model's performance, it is recommended to fine-tune it on a domain-specific dataset or explore different prompt engineering strategies.
