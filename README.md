@@ -21,16 +21,14 @@ Use the following command to run the evaluation script:
 ```
 python evaluate_gpt.py --model_engine MODEL_ENGINE --dataset_path DATASET_PATH --api_key API_KEY --report_file_path REPORT_FILE_PATH
 ```
-Replace 
+Replace with appropriate values.
 - -- model_engine: The name of the GPT model engine to use with the OpenAI API.
 - -- dataset_path: Path to the evaluation dataset.
 - -- block_size: Block size for tokenization.
 - -- api_key: API key for OpenAI API.
 - -- report_file_path: Path to save the evaluation report.
-- -- num_examples: Number of input-output examples to display.
-- -- num_threads: Number of threads to use for parallel computation.
-
-with appropriate values. Optional parameters can be added for the number of examples to display (--num_examples NUM_EXAMPLES) and the number of threads for parallel computation (--num_threads NUM_THREADS).
+- -- num_examples: Number of input-output examples to display.(Optional parameter)
+- -- num_threads: Number of threads to use for parallel computation.(Optional parameter)
 
 Example:
 ```
