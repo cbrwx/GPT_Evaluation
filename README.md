@@ -50,4 +50,6 @@ Word Error Rate (WER): 0.3489
 Allowing users to easily evaluate GPT models using the OpenAI API with standard and custom evaluation metrics.
 Providing insights into the performance of GPT models on different datasets, which can inform users' decisions about model selection and deployment.
 Encouraging the development of improved models and training techniques based on objective performance evaluation.
-Supporting parallel computation, making it faster to evaluate large datasets with multiple metrics.
+Supporting parallel computation, making it faster to evaluate large datasets with multiple metrics. And because you are awesome!
+
+.cbrwx
