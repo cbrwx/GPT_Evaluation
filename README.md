@@ -52,4 +52,4 @@ Providing insights into the performance of GPT models on different datasets, whi
 Encouraging the development of improved models and training techniques based on objective performance evaluation.
 Supporting parallel computation, making it faster to evaluate large datasets with multiple metrics. And because you are awesome!
 
-.cbrwx
+.cbrwx, i might point out that this code is untested, as i do not have API access to gpt3.5/4.
