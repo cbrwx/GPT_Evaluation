@@ -9,6 +9,7 @@ from nltk.translate.bleu_score import sentence_bleu
 from rouge import Rouge
 from jiwer import wer
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 
 class TextDataset(Dataset):
     def __init__(self, file_path, tokenizer, block_size):
@@ -120,15 +121,35 @@ def custom_metric_example(dataset, model_engine, api_key):
     # Implement your custom evaluation metric here
     return 0.0
 
-def generate_report(bleu_score, rouge_scores, wer_score, file_path):
-    report = "Model Evaluation Report\n\n"
+def generate_report(model_engine, bleu_score, rouge_scores, wer_score, file_path):
+    report = "Model Evaluation Report\n"
+    report += f"Model: {model_engine}\n"
+    report += f"Date: {datetime.now().strftime('%Y-%m-%d')}\n\n"
+
+    report += "1. Introduction\n"
+    report += "This report presents the evaluation results of the GPT model using the OpenAI API on a custom dataset.\n\n"
+
+    report += "2. Dataset\n"
+    report += "The dataset used for evaluation was obtained from [source]. It consists of [number of samples] samples and has undergone the following preprocessing steps: [describe preprocessing].\n\n"
+
+    report += "3. Evaluation Metrics\n"
+    report += "The evaluation metrics used in this report include:\n"
+    report += "- BLEU Score: A metric that measures the similarity between the generated text and the reference text based on n-gram matches.\n"
+    report += "- ROUGE Scores: A set of metrics (ROUGE-N, ROUGE-L, and ROUGE-W) that compare the generated text to the reference text based on overlapping n-grams, longest common subsequences, and weighted n-gram matches, respectively.\n"
+    report += "- Word Error Rate (WER): A metric that measures the similarity between the generated text and the reference text by calculating the minimum number of edits (insertions, deletions, and substitutions) needed to transform one text into the other, divided by the total number of words in the reference text.\n"
+    report += "- Custom Metric (if applicable): [brief explanation]\n\n"
+
+    report += "4. Results\n"
     report += f"BLEU Score: {bleu_score}\n"
     report += f"ROUGE Scores: {rouge_scores}\n"
-    report += f"Word Error Rate (WER): {wer_score}\n"
+    report += f"Word Error Rate (WER): {wer_score}\n\n"
+
+    report += "5. Conclusion\n"
+    report += "Based on the evaluation results, the GPT model shows [summary of performance]. [Any additional insights, recommendations, or conclusions].\n"
 
     with open(file_path, "w") as f:
         f.write(report)
-        
+
     return report
 
 def main():
@@ -166,7 +187,7 @@ def main():
     visualize_scores(scores, "Evaluation Metrics")
 
     # Generate and display report
-    report = generate_report(scores, args.report_file_path)
+    report = generate_report(args.model_engine, scores['BLEU'], scores['ROUGE'], scores['WER'], args.report_file_path)
     print("\nGenerated report:")
     print(report)
 
