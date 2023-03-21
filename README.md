@@ -64,6 +64,9 @@ Word Error Rate (WER): 0.25
 Conclusion
 Based on the evaluation results, the GPT model shows satisfactory performance in terms of BLEU and ROUGE scores, while there is room for improvement in Word Error Rate. To enhance the model's performance, it is recommended to fine-tune it on a domain-specific dataset or explore different prompt engineering strategies.
 ```
+# Quality and relevance, not irrelevance and quantity.
+- It's important to keep in mind that the quality of your evaluation report depends not only on the code but also on the quality and relevance of the dataset, the appropriateness of the evaluation metrics for the task, and the validity of the conclusions drawn from the evaluation results. It may be helpful to review OpenAI's documentation and any specific instructions or guidelines they have provided for evaluation reporting in order to ensure that your report meets their requirements.
+
 # Why would i use this?
 Allowing users to easily evaluate GPT models using the OpenAI API with standard and custom evaluation metrics.
 Providing insights into the performance of GPT models on different datasets, which can inform users' decisions about model selection and deployment.
