@@ -140,11 +140,11 @@ def generate_report(model_engine, bleu_score, rouge_scores, wer_score, file_path
     report += "- Custom Metric (if applicable): [brief explanation]\n\n"
 
     report += "4. Results\n"
-    report += f"- BLEU Score: {bleu_score:.2f} ({bleu_score*100:.2f}%)\n"
-    report += f"- ROUGE-1 Score: {rouge_scores['rouge-1']:.2f} ({rouge_scores['rouge-1']*100:.2f}%)\n"
+    report += f"- BLEU Score: {bleu_score:.2f} ({bleu_score*100:.2f}%)\n" # higher is better
+    report += f"- ROUGE-1 Score: {rouge_scores['rouge-1']:.2f} ({rouge_scores['rouge-1']*100:.2f}%)\n" # higher is better
     report += f"- ROUGE-2 Score: {rouge_scores['rouge-2']:.2f} ({rouge_scores['rouge-2']*100:.2f}%)\n"
     report += f"- ROUGE-L Score: {rouge_scores['rouge-l']:.2f} ({rouge_scores['rouge-l']*100:.2f}%)\n"
-    report += f"- Word Error Rate (WER): {wer_score:.2f} ({wer_score*100:.2f}%)\n\n"
+    report += f"- Word Error Rate (WER): {wer_score:.2f} ({wer_score*100:.2f}%)\n\n" # lower is better
 
     report += "5. Conclusion\n"
     report += "Based on the evaluation results, the GPT model shows [summary of performance]. [Any additional insights, recommendations, or conclusions].\n"
