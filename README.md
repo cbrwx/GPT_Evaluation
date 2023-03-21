@@ -41,28 +41,27 @@ Example report:
 ```
 Model Evaluation Report
 Model: gpt-3.5-0301
-Date: 2023-03-21
+Date: 2023-03-22
 
-Introduction
+1. Introduction
 This report presents the evaluation results of the GPT model using the OpenAI API on a custom dataset.
 
-Dataset
-The dataset used for evaluation was obtained from the XYZ Dataset Repository. It consists of 500 samples and has undergone the following preprocessing steps: text cleaning, tokenization, and filtering out samples longer than the block size.
+2. Dataset
+The dataset used for evaluation was obtained from [source]. It consists of [number of samples] samples and has undergone the following preprocessing steps: [describe preprocessing].
 
-Evaluation Metrics
+3. Evaluation Metrics
 The evaluation metrics used in this report include:
-- BLEU Score: The Bilingual Evaluation Understudy (BLEU) score measures the similarity between generated text and reference text, ranging from 0 to 1, with higher scores indicating better performance.
-- ROUGE Scores: The Recall-Oriented Understudy for Gisting Evaluation (ROUGE) scores are a set of metrics (ROUGE-1, ROUGE-2, and ROUGE-L) that measure the overlap of n-grams between generated text and reference text, indicating the quality of the generated summary.
-- Word Error Rate (WER): The Word Error Rate (WER) is the ratio of the minimum number of edit operations (insertions, deletions, or substitutions) required to convert the generated text into the reference text, divided by the total number of words in the reference text.
-- Custom Metric (if applicable): A user-defined evaluation metric tailored to the specific task or application.
+- BLEU Score: A metric that measures the similarity between the generated text and the reference text based on n-gram matches.
+- ROUGE Scores: A set of metrics (ROUGE-N, ROUGE-L, and ROUGE-W) that compare the generated text to the reference text based on overlapping n-grams, longest common subsequences, and weighted n-gram matches, respectively.
+- Word Error Rate (WER): A metric that measures the similarity between the generated text and the reference text by calculating the minimum number of edits (insertions, deletions, and substitutions) needed to transform one text into the other, divided by the total number of words in the reference text.
 
-Results
-- BLEU Score: 0.45
-- ROUGE Scores: {'rouge-1': 0.6, 'rouge-2': 0.43, 'rouge-l': 0.57}
-- Word Error Rate (WER): 0.25
+4. Results
+- BLEU Score: 0.6 (60.0%)
+- ROUGE Scores: {'rouge-1': 0.3 (30.0%), 'rouge-2': 0.1 (10.0%), 'rouge-l': 0.5 (50.0%)}
+- Word Error Rate (WER): 0.2 (20.0%)
 
-Conclusion
-Based on the evaluation results, the GPT model shows satisfactory performance in terms of BLEU and ROUGE scores, while there is room for improvement in Word Error Rate. To enhance the model's performance, it is recommended to fine-tune it on a domain-specific dataset or explore different prompt engineering strategies.
+5. Conclusion
+Based on the evaluation results, the GPT model shows average performance. Further analysis and improvement are recommended.
 ```
 # Quality and relevance, not irrelevance and quantity.
 - It's important to keep in mind that the quality of your evaluation report depends not only on the code but also on the quality and relevance of the dataset, the appropriateness of the evaluation metrics for the task, and the validity of the conclusions drawn from the evaluation results. It may be helpful to review OpenAI's documentation and any specific instructions or guidelines they have provided for evaluation reporting in order to ensure that your report meets their requirements.
